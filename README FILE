@@ -1,9 +1,9 @@
                                                                                     (8-Puzzle Solver)
 This is an 8-puzzle solver using the "A* search algorithm" with the Manhattan distance heuristic.
-The 8-puzzle is a sliding puzzle that consists of a 3x3 grid with 8 numbered tiles and one empty space. 
+The 8-puzzle is a sliding puzzle that consists of a "3x3 grid with 8 numbered tiles" and one empty space. 
 The goal is to rearrange the tiles into a specific goal configuration by sliding them into the empty space.
 
-ALGORITHM:--
+SCRIPT ALGORITHM:--
 A* SEARCH ALGORITHM:-- A pathfinding algorithm that uses a heuristic to guide its search. It explores the most promising paths first, ensuring an optimal solution (shortest path)
                         if the heuristic is admissible (never overestimates the cost to reach the goal).
 MANHATTAN DISTANCE HEURISTICS:-- This heuristic calculates the sum of the horizontal and vertical distances of each tile from its position in the goal configuration.
@@ -19,6 +19,29 @@ is_solvable(start, goal):                 Determines if the puzzle is solvable b
 solve_8puzzle(start_puzzle, GOAL):        Implements the A* search algorithm to find a solution.
 
 PREREQUISITES:--
-The basics of python like inbuilt modules , functions , data structures,etc. 
-The code uses "heapq" for priority queue implementation and "copy" (specifically deepcopy) for creating copies of the puzzle states.
-Both of these are standard libraries and do not require separate installation; they are usually included with your Python installation.
+To run this project, you need:
+*   Python 3.x installed on your system.
+
+## Setup and Installation
+   No special installation steps are required beyond having Python installed. The project uses standard Python libraries (`heapq` and `copy`).
+## How to Run
+
+1.  **Open a Terminal/Command Prompt**: Navigate to the directory where you saved the `8_puzzle_solver.py` file.
+2.  **Execute the Script**: Run the script using Python:
+    ```bash
+    python 8_puzzle_solver.py
+    ```
+3.  **Enter Puzzle Configurations**: The script will prompt you to enter the starting puzzle and the goal puzzle. 
+                                     Each puzzle must be entered row by row, with numbers (0-8, where 0 represents the blank space) separated by spaces.
+
+#The basics of python like inbuilt modules , functions , data structures,etc. 
+ The code uses "heapq" for priority queue implementation and "copy" (specifically deepcopy) for creating copies of the puzzle states.
+ Both of these are standard libraries and do not require separate installation; they are usually included with your Python installation.
+OUTPUT:--
+Upon successful execution and input, the script will:
+
+1.  Print the starting and goal puzzle configurations.
+2.  Indicate if the puzzle is solvable or not based on parity.
+3.  If solvable, it will print the message "SOLVED in X moves, Y nodes explored!" where X is the number of moves and Y is the number of nodes the A* algorithm explored.
+4.  It will then list each step of the solution, showing the move (U, D, L, R) and the resulting puzzle state. The last step will show the final goal state.
+5.  If unsolvable, it will print "UNSOLVABLE - different parity spaces!" or "Unsolvable (explored Y nodes)" if no path is found.
