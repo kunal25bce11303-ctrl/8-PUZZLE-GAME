@@ -1,0 +1,19 @@
+                                                                                    (8-Puzzle Solver)
+This is an 8-puzzle solver using the "A* search algorithm" with the Manhattan distance heuristic.
+The 8-puzzle is a sliding puzzle that consists of a 3x3 grid with 8 numbered tiles and one empty space. 
+The goal is to rearrange the tiles into a specific goal configuration by sliding them into the empty space.
+
+ALGORITHM:--
+A* SEARCH ALGORITHM:-- A pathfinding algorithm that uses a heuristic to guide its search. It explores the most promising paths first, ensuring an optimal solution (shortest path)
+                        if the heuristic is admissible (never overestimates the cost to reach the goal).
+MANHATTAN DISTANCE HEURISTICS:-- This heuristic calculates the sum of the horizontal and vertical distances of each tile from its position in the goal configuration.
+                                 It is an admissible heuristic for the 8-puzzle problem.
+SOLVABILITY CHECK:-- Before attempting to solve, the code performs a parity check to determine if the puzzle is even solvable. The 8-puzzle is solvable if and only if the number of inversions is even.
+
+  
+FUNCTIONS IMPLEMENTED--
+is_valid_puzzle(puzzle):                  Checks if a given puzzle configuration is valid (contains numbers 0-8 exactly once).
+is_solved(current, GOAL):                 Checks if the current puzzle configuration matches the goal configuration.
+manhattan_distance(puzzle, GOAL):         Calculates the Manhattan distance heuristic for a given puzzle.
+is_solvable(start, goal):                 Determines if the puzzle is solvable by checking the parity of inversions.
+solve_8puzzle(start_puzzle, GOAL):        Implements the A* search algorithm to find a solution.
