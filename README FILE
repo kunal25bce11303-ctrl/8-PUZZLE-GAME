@@ -17,3 +17,8 @@ is_solved(current, GOAL):                 Checks if the current puzzle configura
 manhattan_distance(puzzle, GOAL):         Calculates the Manhattan distance heuristic for a given puzzle.
 is_solvable(start, goal):                 Determines if the puzzle is solvable by checking the parity of inversions.
 solve_8puzzle(start_puzzle, GOAL):        Implements the A* search algorithm to find a solution.
+
+PREREQUISITES:--
+The basics of python like inbuilt modules , functions , data structures,etc. 
+The code uses "heapq" for priority queue implementation and "copy" (specifically deepcopy) for creating copies of the puzzle states.
+Both of these are standard libraries and do not require separate installation; they are usually included with your Python installation.
